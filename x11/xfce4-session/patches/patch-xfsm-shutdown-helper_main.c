@@ -11,8 +11,8 @@ Add NetBSD commands.
  #endif
 -
 +#ifdef BACKEND_TYPE_NETBSD
-+#define UP_BACKEND_SUSPEND_COMMAND      "/usr/sbin/zzz"
-+#define UP_BACKEND_HIBERNATE_COMMAND    "/usr/sbin/zzz"
++#define UP_BACKEND_SUSPEND_COMMAND      "/sbin/sysctl -w hw.acpi.sleep.state=1"
++#define UP_BACKEND_HIBERNATE_COMMAND    "/sbin/sysctl -w hw.acpi.sleep.state=4"
 +#endif
  
  static gboolean
