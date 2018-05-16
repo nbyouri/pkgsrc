@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/05/16 11:30:36 youri Exp $
+@comment $NetBSD$
 bin/ck-history
 bin/ck-launch-session
 bin/ck-list-sessions

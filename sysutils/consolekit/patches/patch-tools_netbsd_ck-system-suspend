@@ -1,0 +1,15 @@
+$NetBSD$
+
+Use S1 for suspend on NetBSD.
+
+--- tools/netbsd/ck-system-suspend.orig	2017-06-02 01:31:44.000000000 +0000
++++ tools/netbsd/ck-system-suspend
+@@ -1,7 +1,7 @@
+ #!/bin/sh
+ 
+ if /sbin/sysctl -q hw.acpi.sleep.state; then
+-	/sbin/sysctl -w hw.acpi.sleep.state=3
++	/sbin/sysctl -w hw.acpi.sleep.state=1
+ elif /sbin/sysctl -q machdep.xen.suspend; then
+ 	/sbin/sysctl -w machdep.xen.suspend=1
+ elif test -x /usr/sbin/apm; then
